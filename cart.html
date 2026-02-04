@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="cart-body">
+    <header class="navbar cart-navbar">
+        <div class="nav-logo">
+            <a class="logo-icon" href="index.html">E-Commerce</a>
+        </div>
+        <div class="nav-actions">
+            <a class="text-link" href="index.html">Continue shopping</a>
+            <a class="cart-btn active" href="cart.html" aria-label="View cart">
+                <span class="cart-label">Cart</span>
+                <span class="cart-items">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="cart-page">
+        <section class="cart-list">
+            <div class="cart-header">
+                <h1>Shopping Cart</h1>
+                <p id="cartMeta" class="cart-meta">0 items</p>
+            </div>
+            <div id="cartItems" class="cart-items-list"></div>
+            <div id="emptyCart" class="empty-cart">
+                <h2>Your cart is empty</h2>
+                <p>Browse our catalog and add items to get started.</p>
+                <a class="primary-link" href="index.html">Browse products</a>
+            </div>
+        </section>
+
+        <aside class="cart-summary">
+            <h2>Order Summary</h2>
+            <div class="summary-row">
+                <span>Items</span>
+                <span id="cartCount">0</span>
+            </div>
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">₹0</span>
+            </div>
+            <div class="summary-row">
+                <span>Shipping</span>
+                <span class="summary-muted">Free</span>
+            </div>
+            <div class="summary-total">
+                <span>Total</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <button id="checkoutBtn" class="checkout-btn" type="button">Proceed to Checkout</button>
+            <button id="clearCartBtn" class="clear-btn" type="button">Clear Cart</button>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

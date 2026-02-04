@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-logo">
+            <div class="logo-icon">E-Commerce</div>
+        </div>
+
+        <nav class="nav-tabs">
+            <button class="nav-tab active">Home</button>
+            <button class="nav-tab">Products</button>
+            <button class="nav-tab">Categories</button>
+            <button class="nav-tab">Deals</button>
+            <button class="nav-tab">About</button>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="search-btn"></button>
+            <button class="wishlist-btn" type="button" aria-label="Wishlist">
+                <span class="wishlist-icon">♥</span>
+                <span class="wishlist-items">0</span>
+            </button>
+            <a class="cart-btn" href="cart.html" aria-label="View cart">
+                <span class="cart-label">Cart</span>
+                <span class="cart-items">0</span>
+            </a>
+            <button class="signin-btn">Sign in</button>
+        </div>
+    </header>
+
+    <!-- Category Bar -->
+    <div class="category-bar">
+        <button class="category-btn active" data-category="all">All Categories</button>
+        <button class="category-btn" data-category="deals">Deals</button>
+        <button class="category-btn" data-category="crypto">Crypto</button>
+        <button class="category-btn" data-category="fashion">Fashion</button>
+        <button class="category-btn" data-category="health">Health & Wellness</button>
+        <button class="category-btn" data-category="art">Art</button>
+        <button class="category-btn" data-category="home">Home</button>
+        <button class="category-btn" data-category="sport">Sport</button>
+        <button class="category-btn" data-category="music">Music</button>
+        <button class="category-btn" data-category="gaming">Gaming</button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Price Range Section -->
+            <div class="filter-section price-section">
+                <h3>Price Range</h3>
+                <p class="price-subtitle">The average price is ₹10,000</p>
+                <div class="price-slider-container">
+                    <input type="range" id="priceSlider" min="2000" max="40000" value="40000" class="price-slider">
+                    <div class="price-values">
+                        <span class="price-tag">₹2,000</span>
+                        <span class="price-tag" id="maxPrice">₹40,000</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Star Rating Section -->
+            <div class="filter-section rating-section">
+                <h3>Star Rating</h3>
+                <label class="filter-option">
+                    <span class="stars">★★★★</span>
+                    <span class="rating-text">4 Stars & up</span>
+                </label>
+            </div>
+
+            <!-- Brand Section -->
+            <div class="filter-section brand-section">
+                <h3>Brand</h3>
+                <label class="filter-option">
+                    <input type="checkbox" checked class="brand-filter">
+                    <span>Adidas</span>
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" checked class="brand-filter">
+                    <span>Columbia</span>
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" checked class="brand-filter">
+                    <span>Demix</span>
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" checked class="brand-filter">
+                    <span>New Balance</span>
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" checked class="brand-filter">
+                    <span>Nike</span>
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" checked class="brand-filter">
+                    <span>Xiaomi</span>
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" class="brand-filter">
+                    <span>Asics</span>
+                </label>
+                <a href="#" class="more-brand">More Brand</a>
+            </div>
+
+            <!-- Delivery Options Section -->
+            <div class="filter-section delivery-section">
+                <h3>Delivery Options</h3>
+                <div class="delivery-toggle">
+                    <button class="delivery-btn active">Standard</button>
+                    <button class="delivery-btn">Pick Up</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Products Section -->
+        <main class="products-container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically added here -->
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
